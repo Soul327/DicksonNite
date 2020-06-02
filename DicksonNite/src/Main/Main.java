@@ -15,7 +15,6 @@ import javax.swing.JFrame;
 import Misc.Assets;
 import Misc.KeyManager;
 import Misc.MouseManager;
-import Misc.Prerender;
 
 public class Main implements Runnable {
 	
@@ -30,7 +29,6 @@ public class Main implements Runnable {
 	public static KeyManager keyManager;
 	public static MouseManager mouseManager;
 	public static StateManager stateManager;
-	public static Thread load;
 	
 	//Starts the program
 	public static void main(String args[]) {
@@ -44,8 +42,6 @@ public class Main implements Runnable {
 		keyManager = new KeyManager();
 		mouseManager = new MouseManager();
 		Assets.init();
-		load = new Prerender();
-		load.start();
 	}
 	
 	private void init(){
@@ -77,6 +73,7 @@ public class Main implements Runnable {
 		stateManager=new StateManager();
 	}
 	private void tick(){
+		debugMessages = new ArrayList<String>();
 		width=canvas.getWidth();
 		height=canvas.getHeight();
 		keyManager.tick();
@@ -85,7 +82,6 @@ public class Main implements Runnable {
 		
 		stateManager.tick();
 		
-		debugMessages = new ArrayList<String>();
 		//Sort debug
 		
 	}
