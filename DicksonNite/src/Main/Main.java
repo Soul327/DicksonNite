@@ -104,7 +104,8 @@ public class Main implements Runnable {
 		g.fillRect(0, 0, width, height);
 		//Draw Here!
 		
-		stateManager.render(new Misc.Graphics((Graphics2D) g));
+		Graphics2D g2d = (Graphics2D)g;
+		stateManager.render(new Misc.Graphics(g2d));
 		
 		//Drawing fps
 		if(devMode>0) {
