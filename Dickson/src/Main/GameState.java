@@ -36,12 +36,14 @@ public class GameState {
 		levelCount += 1;
 	}
 	public void tick() {
-		for(Entity e:entities) {
+		for(int z=0;z<entities.size();z++) {
+			Entity e = entities.get(z);
 			e.tick();	
 		}
 	}
 	public void render(Graphics g) {
-		for(Entity e:entities) {
+		for(int z=0;z<entities.size();z++) {
+			Entity e = entities.get(z);
 			e.render(g);
 		}
 		if(!(levelCount==0+1)){

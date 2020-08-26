@@ -14,7 +14,7 @@ public abstract class Entity {
 	static double max=.002;
 	
 	public void getSound() {
-		if(true) return;
+		if(SoundManager.getSoundsSize()>0 | true) return;
 		File file = new File("Assets/pings and scrapes");
 		File[] list = file.listFiles();
 		int rand = (int)(Math.random()*list.length);
