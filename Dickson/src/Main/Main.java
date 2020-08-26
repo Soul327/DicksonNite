@@ -19,7 +19,7 @@ import Misc.MouseManager;
 
 public class Main implements Runnable {
 	
-	public static int width=0, height=0, devMode = 0, maxFPS = 60;
+	public static int width=500, height=500, devMode = 0, maxFPS = 60;
 	public static double fps=0;
 	public static ArrayList<String> debugMessages = new ArrayList<String>();
 	
