@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferStrategy;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -50,7 +51,7 @@ public class Main implements Runnable {
 	}
 	
 	private void init(){
-		frame = new JFrame("Library Test");
+		frame = new JFrame("Dickson's Game");
 		frame.setSize(width, height);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(true);
@@ -85,8 +86,8 @@ public class Main implements Runnable {
 		height=canvas.getHeight();
 		keyManager.tick();
 		
-		//if(KeyManager.keyRelease(KeyEvent.VK_EQUALS) & devMode<1) devMode++;
-		//if(KeyManager.keyRelease(KeyEvent.VK_MINUS) & devMode>0) devMode--;
+		if(KeyManager.keyRelease(KeyEvent.VK_EQUALS) & devMode<1) devMode++;
+		if(KeyManager.keyRelease(KeyEvent.VK_MINUS) & devMode>0) devMode--;
 		stateManager.tick();
 		debugMessages = new ArrayList<String>();
 	}

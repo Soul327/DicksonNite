@@ -4,14 +4,17 @@ import java.awt.Color;
 import java.io.File;
 
 import Misc.Graphics;
+import Misc.MouseManager;
 import Misc.SoundManager;
 
 public abstract class Entity {
 	
 	double xpos, ypos, xvel, yvel;
-	double width = 50, height=50;
+	static double width = 200, height=200;
+	static double max=.002;
 	
 	public void getSound() {
+		if(true) return;
 		File file = new File("Assets/pings and scrapes");
 		File[] list = file.listFiles();
 		int rand = (int)(Math.random()*list.length);
@@ -40,6 +43,15 @@ public abstract class Entity {
 		if(ypos >= Main.height - height && yvel>0) {
 			yvel *= -1;
 			getSound();
+		}
+		if(this instanceof Wildo) {
+			int mx = MouseManager.mouseX;
+			int my = MouseManager.mouseY;
+			boolean leftClick = MouseManager.leftPressed;
+			if((mx <= xpos + width && mx >= xpos) && (my <= ypos + height && my >= ypos) && (leftClick)){
+				//do something later
+				GameState.newLevel();
+			}
 		}
 	}
 	
