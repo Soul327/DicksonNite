@@ -17,7 +17,7 @@ public class GameState {
 		try{
 			//Load Decoy
 			for(File f:new File("Assets/Decoys").listFiles()) decoys.add( ImageIO.read( f ) );
-			
+			//Load Targets
 			for(File f:new File("Assets/Targets").listFiles()) targets.add( ImageIO.read( f ) );
 		}catch(Exception e){}
 		newLevel();
@@ -44,12 +44,7 @@ public class GameState {
 		for(Entity e:entities) {
 			e.render(g);
 		}
-		if(levelCount==0+1){
-			g.setFont( "Serif",Font.PLAIN,45 );
-			int line = 0;
-			String str = "MAIN MENU"; g.drawOutlinedString(str,Main.width/2-g.getStringLength(str)/2,Main.height/4 + line++*g.fontSize);
-			str = "Click the target to continue..."; g.drawOutlinedString(str,Main.width/2-g.getStringLength(str)/2,Main.height/4 + line++*g.fontSize);
-		}else{
+		if(!(levelCount==0+1)){
 			g.setFont( "Serif",Font.PLAIN,30 );
 			g.drawOutlinedString("Level:"+(levelCount-1), 0, g.fontSize);
 		}

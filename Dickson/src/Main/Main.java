@@ -20,7 +20,7 @@ import Misc.MouseManager;
 
 public class Main implements Runnable {
 	
-	public static int width=500, height=500, devMode = 0, maxFPS = 60;
+	public static int width=500, height=500, devMode = 0, maxFPS = 120;
 	public static double fps=0;
 	public static ArrayList<String> debugMessages = new ArrayList<String>();
 	
@@ -117,9 +117,9 @@ public class Main implements Runnable {
 		if(devMode>0) {
 			g.setColor(Color.green);
 			g.setFont( new Font("Serif",Font.PLAIN,15) );
-			g.drawString("FPS "+fps,0, 15);
+			debugMessages.add("FPS "+fps);
 			for(int x=0;x<debugMessages.size();x++) {
-				g.drawString(debugMessages.get(x),0, x*15+45);
+				g.drawString(debugMessages.get(x),0, (x+1)*15);
 			}
 			g.drawString("Dev Mode "+devMode,0, height-20);
 		}
