@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
 import javax.imageio.ImageIO;
-import Misc.Graphics;
+import Rendering.Graphics;
 
 public class GameState {
 

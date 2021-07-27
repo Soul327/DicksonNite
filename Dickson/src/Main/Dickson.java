@@ -3,7 +3,7 @@ package Main;
 import java.awt.Color;
 import java.awt.Font;
 
-import Misc.Graphics;
+import Rendering.Graphics;
 
 public class Dickson extends Entity {
 	int imgNum = 0;

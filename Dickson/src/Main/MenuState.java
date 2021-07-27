@@ -2,7 +2,7 @@ package Main;
 
 import java.awt.Font;
 
-import Misc.Graphics;
+import Rendering.Graphics;
 
 public class MenuState {
 	public void tick() {

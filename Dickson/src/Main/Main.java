@@ -111,7 +111,7 @@ public class Main implements Runnable {
 		
 		Graphics2D g2d=(Graphics2D) g;
 		
-		stateManager.render( new Misc.Graphics(g2d) );
+		stateManager.render( new Rendering.Graphics(g2d) );
 		
 		//Drawing fps
 		if(devMode>0) {

@@ -1,6 +1,6 @@
 package Main;
 
-import Misc.Graphics;
+import Rendering.Graphics;
 
 public class StateManager {
 	GameState gameState;

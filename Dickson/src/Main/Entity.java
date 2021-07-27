@@ -3,7 +3,7 @@ package Main;
 import java.awt.Color;
 import java.io.File;
 
-import Misc.Graphics;
+import Rendering.Graphics;
 import Misc.MouseManager;
 import Misc.SoundManager;
 
