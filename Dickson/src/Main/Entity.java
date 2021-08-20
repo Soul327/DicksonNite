@@ -15,8 +15,7 @@ public abstract class Entity {
 	
 	public void getSound() {
 		if(SoundManager.getSoundsSize()>0 | true) return;
-		File file = new File("Assets/pings and scrapes");
-		File[] list = file.listFiles();
+		File[] list = new File("Assets/pings and scrapes").listFiles();
 		int rand = (int)(Math.random()*list.length);
 		for(int x=0;x<list.length;x++) 
 			if(rand == x) {
@@ -36,11 +35,11 @@ public abstract class Entity {
 			yvel *= -1;
 			getSound();
 		}
-		if(xpos >= Main.width - width && xvel>0) {
+		if(xpos >= WildoLauncher.width - width && xvel>0) {
 			xvel *= -1;
 			getSound();
 		}
-		if(ypos >= Main.height - height && yvel>0) {
+		if(ypos >= WildoLauncher.height - height && yvel>0) {
 			yvel *= -1;
 			getSound();
 		}

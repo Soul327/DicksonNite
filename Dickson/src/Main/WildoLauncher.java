@@ -18,7 +18,7 @@ import Misc.Assets;
 import Misc.KeyManager;
 import Misc.MouseManager;
 
-public class Main implements Runnable {
+public class WildoLauncher implements Runnable {
 	
 	public static int width=500, height=500, devMode = 0, maxFPS = 120;
 	public static double fps=0;
@@ -32,16 +32,16 @@ public class Main implements Runnable {
 	public static MouseManager mouseManager;
 	public static StateManager stateManager;
 	public static Thread load;
-	public static Main main;
+	public static WildoLauncher main;
 	
 	//Starts the program
 	public static void main(String args[]) throws FileNotFoundException, IOException {
 		//Commands commands = new Commands(); commands.start();
-		main = new Main();
+		main = new WildoLauncher();
 		main.start();
 	}
 	
-	public Main(){
+	public WildoLauncher(){
 		fps = maxFPS;
 		keyManager = new KeyManager();
 		mouseManager = new MouseManager();

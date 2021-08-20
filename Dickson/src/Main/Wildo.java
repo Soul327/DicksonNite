@@ -6,10 +6,10 @@ public class Wildo extends Entity {
 	int imgNum = 0;
 
 	public Wildo() {
-		xpos = Math.random() * (Main.width - width);
-		ypos = Math.random() * (Main.height - height);
-		xvel = ((Math.random() * (max * 2)) - max) * Main.width;
-		yvel = ((Math.random() * (max * 2)) - max) * Main.height;
+		xpos = Math.random() * (WildoLauncher.width - width);
+		ypos = Math.random() * (WildoLauncher.height - height);
+		xvel = ((Math.random() * (max * 2)) - max) * WildoLauncher.width;
+		yvel = ((Math.random() * (max * 2)) - max) * WildoLauncher.height;
 		imgNum = (int) (Math.random() * GameState.targets.size());
 	}
 

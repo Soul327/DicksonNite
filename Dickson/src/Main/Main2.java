@@ -82,8 +82,8 @@ public class Main2 extends Thread {
 	}
 	
 	private void tick(){
-		Main.width = width = canvas.getWidth();
-		Main.height = height = canvas.getHeight();
+		WildoLauncher.width = width = canvas.getWidth();
+		WildoLauncher.height = height = canvas.getHeight();
 		keyManager.tick();
 		
 		if(KeyManager.keyRelease(KeyEvent.VK_EQUALS) & devMode<1) devMode++;
